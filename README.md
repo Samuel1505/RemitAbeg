@@ -30,16 +30,68 @@ Sending money home shouldn’t be hard. Traditional remittance services are slow
 ## 🧱 Tech Stack
 
 - **Smart Contracts:** Solidity / EVM  
-- **Frontend:** Next.js + Wagmi + RainbowKit  
+- **Frontend:** Next.js + AppKit + Wagmi + Viem  
 - **Blockchain:** Base / Polygon / Lisk  
 - **Off-Ramp Integration:** Onramp.money / Bitnob API  
 - **Storage:** IPFS / Pinata  
 
 ---
 
+## 📦 Project Structure
+
+```
+RemitAbeg/
+├── frontend/                    # Next.js frontend app
+│   ├── app/                     # Next.js app router
+│   ├── components/              # React components
+│   ├── config/                  # AppKit & Wagmi config
+│   └── context/                 # React context providers
+└── README.md                    # This file
+```
+
+## 🚀 Getting Started
+
+```bash
+# Install dependencies
+cd frontend
+npm install
+
+# Create .env.local file
+echo "NEXT_PUBLIC_PROJECT_ID=a9fbadc760baa309220363ec867b732e" > .env.local
+echo "NEXT_PUBLIC_ENVIRONMENT=testnet" >> .env.local
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## ✅ Completed Features
+
+### Landing Page
+- ✅ Beautiful Nigerian-inspired design (Green & White theme)
+- ✅ Hero section with animated gradients
+- ✅ About section explaining the platform
+- ✅ 4 feature cards (Speed ⚡, Low Fees 💸, Transparency 🔍, Community 🤝)
+- ✅ "How It Works" section with 3 steps
+- ✅ CTA section when wallet disconnected
+- ✅ Footer with social links
+- ✅ Fully responsive (mobile-first)
+
+### WalletConnect Integration
+- ✅ AppKit integration (same as billoq-frontend)
+- ✅ Multi-wallet support (MetaMask, Trust Wallet, Coinbase, etc.)
+- ✅ Wallet connection modal
+- ✅ Real-time wallet status display (address, network, balance)
+- ✅ Disconnect functionality
+- ✅ Toast notifications for connection events
+- ✅ Auto-reconnect on page reload
+- ✅ Support for testnet/mainnet networks (Sepolia, Base, Polygon, etc.)
+
 ## 🧭 Roadmap
 
-- ✅ MVP: Wallet-to-wallet remittance  
+- 🔜 Smart contract development  
 - 🔜 NGN off-ramp integration  
 - 🔜 Peer-to-peer swap market  
 - 🔜 USDT / USDC support  
